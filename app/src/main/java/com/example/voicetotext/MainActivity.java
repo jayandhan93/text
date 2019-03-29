@@ -1,4 +1,4 @@
-package com.example.voicetotext;
+package com.example.jay.voicetotext;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -56,12 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
                 i.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
                 i.putExtra(RecognizerIntent.EXTRA_PROMPT,"speak");
-                try{
+                /*try{
                     startActivityForResult(i,limit);
                 }catch (ActivityNotFoundException e){
                     Toast.makeText(getApplicationContext(),"ERROR",Toast.LENGTH_SHORT).show();
-                }
+                } */
 
+                startActivityForResult(i,limit);
 
 
             }
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        textView.setText(speechResult);
+        //textView.setText(speechResult);
 
 
     }
